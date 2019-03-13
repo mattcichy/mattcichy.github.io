@@ -1,1 +1,63 @@
+<!DOCTYPE html>
 
+<html dir='ltr' lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' />
+    <title>Matt Cichy – Developer ・ Vegan ・ Dad ・ Gamer</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        min-width: 100%;
+        padding: 0;
+        width: 100%;
+      }
+      body {
+        background-color: #ebebeb;
+        color: #666666;
+        font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+      }
+      section {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+      section > * {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 50px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: normal;
+      }
+      h2:first-letter {
+        text-transform: capitalize;
+      }
+      h2 strong {
+        color: #333333;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Matt Cichy – </h1>
+      <h2 id="message"></h2>
+    </section>
+    <script>
+      var nouns = ['dad', 'developer', 'gamer', 'vegan']
+        .sort(function() { return .5 - Math.random() })
+        .slice(0, 2);
+      document.getElementById('message').innerHTML =
+        '<strong>' + nouns[0] + '</strong>' + ' with ' + '<strong>' + nouns[1] + '</strong>' + ' powers.';
+    </script>
+  </body>
+</html>
